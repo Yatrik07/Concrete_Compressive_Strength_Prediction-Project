@@ -1,0 +1,24 @@
+2022-08-01 00:56:30.070106	For cluster-0, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-01 00:56:30.070106	Random Forest for 0
+2022-08-01 00:56:39.198627	Got best parameers for cluster-0
+2022-08-01 00:56:39.198627	XGBoost for 0
+2022-08-01 00:56:53.516535	For cluster-1, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-01 00:56:53.517968	Random Forest for 1
+2022-08-01 00:56:58.397506	Got best parameers for cluster-1
+2022-08-01 00:56:58.397506	XGBoost for 1
+2022-08-01 00:57:15.761528	For cluster-2, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-01 00:57:15.761528	Random Forest for 2
+2022-08-01 00:57:18.827156	Got best parameers for cluster-2
+2022-08-01 00:57:18.827156	XGBoost for 2
+2022-08-01 00:57:27.971357	For cluster-3, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-01 00:57:27.972227	Random Forest for 3
+2022-08-01 00:57:31.606849	Got best parameers for cluster-3
+2022-08-01 00:57:31.606849	XGBoost for 3
+2022-08-01 00:57:42.279410	For cluster-4, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-01 00:57:42.279410	Random Forest for 4
+2022-08-01 00:57:45.094344	Got best parameers for cluster-4
+2022-08-01 00:57:45.094344	XGBoost for 4
+2022-08-01 00:57:52.543990	For cluster-5, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-01 00:57:52.544954	Random Forest for 5
+2022-08-01 00:57:55.664250	Got best parameers for cluster-5
+2022-08-01 00:57:55.664250	XGBoost for 5

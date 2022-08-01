@@ -1,0 +1,37 @@
+2022-07-19 13:28:39.104087	Entered function create_Database_Table.
+2022-07-19 13:28:39.105004	Created / Connected TrainingData Database successfully!
+2022-07-19 13:28:39.105981	Train Table created successfully!
+2022-07-19 13:29:04.778622	Entered function create_Database_Table.
+2022-07-19 13:29:04.780575	Created / Connected TrainingData Database successfully!
+2022-07-19 13:29:04.781550	Train Table created successfully!
+2022-07-19 13:29:05.432933	Entered function showTable.
+2022-07-19 13:29:24.217261	Entered function create_Database_Table.
+2022-07-19 13:29:24.219222	Created / Connected TrainingData Database successfully!
+2022-07-19 13:29:24.221161	Train Table created successfully!
+2022-07-19 13:29:24.818431	Entered function showTable.
+2022-07-19 13:29:37.680810	Entered function create_Database_Table.
+2022-07-19 13:29:37.681400	Created / Connected TrainingData Database successfully!
+2022-07-19 13:29:37.682374	Train Table created successfully!
+2022-07-19 13:29:38.273872	Entered function Dataframetodatabase.
+2022-07-19 13:30:44.461923	Entered function create_Database_Table.
+2022-07-19 13:30:44.462899	Created / Connected TrainingData Database successfully!
+2022-07-19 13:30:44.463875	Train Table created successfully!
+2022-07-19 13:30:44.984083	Entered function dropTabel.
+2022-07-19 13:31:03.160441	Entered function create_Database_Table.
+2022-07-19 13:31:03.161422	Created / Connected TrainingData Database successfully!
+2022-07-19 13:31:03.163320	Train Table created successfully!
+2022-07-19 13:31:03.738245	Entered function dropTabel.
+2022-07-19 13:31:03.748033	Table Train dropped successfully.
+2022-07-19 13:31:03.748033	Entered function Dataframetodatabase.
+2022-07-19 13:31:03.786208	Entered function showTable.
+2022-07-19 13:31:55.652293	Entered function create_Database_Table.
+2022-07-19 13:31:55.653268	Created / Connected TrainingData Database successfully!
+2022-07-19 13:31:55.654244	Train Table created successfully!
+2022-07-19 13:31:56.347205	Entered function dropTabel.
+2022-07-19 13:31:56.356934	Table Train dropped successfully.
+2022-07-19 13:31:56.356934	Entered function Dataframetodatabase.
+2022-07-19 13:31:56.377481	Entered function showTable.
+2022-08-01 00:48:26.662108	Entered function Dataframetodatabase.
+2022-08-01 00:51:53.547366	Entered function Dataframetodatabase.
+2022-08-01 00:52:55.887415	Entered function Dataframetodatabase.
+2022-08-01 00:56:27.997085	Entered function Dataframetodatabase.

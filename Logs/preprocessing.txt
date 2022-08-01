@@ -1,0 +1,11 @@
+2022-08-01 00:56:28.045887	Entered Preprocessing Directory.
+2022-08-01 00:56:28.045887	Entered separate_X_Y method.
+2022-08-01 00:56:28.047839	Separated X and y from the data successfully.
+2022-08-01 00:56:28.047839	Entered scaling method.
+2022-08-01 00:56:28.051744	Data scaled successfully.
+2022-08-01 00:56:27.949261	Entered Trainer Class.
+2022-08-01 00:56:27.949261	Entered Training_Validations method in Trainer class.
+2022-08-01 00:56:27.979517	Here valid BatchFileNames : ['cement_strength_20072022_1200.csv', 'cement_strength_20072022_12000.csv', 'cement_strength_20072022_120021.csv', 'cement_strength_20072022_120042.csv']
+2022-08-01 00:56:27.979517	Here invalid BatchFileNames : set()
+2022-08-01 00:56:27.979517	Existing from Training_Validations method.
+2022-08-01 00:56:28.045887	Entered Preprocessing_clustering method in Trainer class.
