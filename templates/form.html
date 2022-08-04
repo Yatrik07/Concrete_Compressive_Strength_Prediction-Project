@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiblity Prediction</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/gif" href="favicon/animated_favicon1.gif">
+    <link rel="stylesheet" href="..//static//css//style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="title"> Concrete Compressive Strength Prediction</div>
+        <form action = "/prediction" method="POST">
+            <div class="Input_data">
+                <div class="input_box">
+                    <span class ="details">Cement :</span>
+                    <input type="text" placeholder="kg in a m3 mixture" id="cement" name="cement">
+                </div>
+                <div class="input_box">
+                    <span class ="details">blast furnace slag :</span>
+                    <input type="text" placeholder="kg in a m3 mixture" id="blast_furnace_slag" name="blast_furnace_slag">
+                </div>
+                <!-- <div class="input_box">
+                    <span class ="details">Wet Bulb Temp :</span>
+                    <input type="text" placeholder="00.0F" id="Wet_Bulb_Temp" name="Wet_Bulb_Temp">
+                </div> -->
+                <div class="input_box">
+                    <span class ="details">Fly Ash :</span>
+                    <input type="text" placeholder="kg in a m3 mixture" id="fly_ash" name="fly_ash">
+                </div>
+                <div class="input_box">
+                    <span class ="details">Water :</span>
+                    <input type="text" placeholder="kg in a m3 mixture" id="water" name="water">
+                </div>
+                <div class="input_box">
+                    <span class ="details">superplasticizer :</span>
+                    <input type="text" placeholder="kg in a m3 mixture" id="superplasticizer" name="superplasticizer">
+                </div>
+                <div class="input_box">
+                    <span class ="details">coarse_aggregate :</span>
+                    <input type="text" placeholder="kg in a m3 mixture" id="coarse_aggregate" name="coarse_aggregate">
+                </div>
+				
+				
+                 <div class="input_box">
+                    <span class ="details">fine_aggregate :</span>
+                    <input type="text" placeholder="kg in a m3 mixture" id="fine_aggregate" name="fine_aggregate">
+                </div> 
+				
+                 <div class="input_box">
+                    <span class ="details">Age :</span>
+                    <input type="text" placeholder="Day (1~365)" id="age" name="age">
+                </div> 				
+				
+            </div>
+            <div class="button">
+                <input type="submit" value="Submit">
+            </div>
+            <div class="button">
+                <input type="submit" value="ReTrain" formaction="/train">
+            </div>			
+        </form>
+    </div>
+</body>
+</html>
