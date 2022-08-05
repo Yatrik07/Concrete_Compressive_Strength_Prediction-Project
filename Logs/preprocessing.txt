@@ -1,0 +1,5 @@
+2022-08-06 01:01:15.547016	Entered Preprocessing Directory.
+2022-08-06 01:01:15.547016	Entered separate_X_Y method.
+2022-08-06 01:01:15.554823	Separated X and y from the data successfully.
+2022-08-06 01:01:15.554823	Entered scaling method.
+2022-08-06 01:01:15.564581	Data scaled successfully.

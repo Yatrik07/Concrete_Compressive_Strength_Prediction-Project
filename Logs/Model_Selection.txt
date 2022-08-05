@@ -1,0 +1,255 @@
+2022-08-06 01:01:18.873164	For cluster-0, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-06 01:01:18.873164	Random Forest for 0
+2022-08-06 01:01:27.270678	Got best parameers for cluster-0
+2022-08-06 01:01:27.270678	XGBoost for 0
+2022-08-06 01:01:46.154306	
+
+Cluster :0
+2022-08-06 01:01:46.162113	Random Forest:({'criterion': 'squared_error', 'n_estimators': 125}, RandomForestRegressor(n_estimators=125), 3.9965663902154835, 0.8892766213656554, 2.4810885798629903, 0.9753405531387983, GridSearchCV(cv=5, estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'criterion': ['squared_error'],
+                         'n_estimators': [125, 150, 200, 300, 400]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:01:46.162113	
+Random Forest Error3.9965663902154835
+2022-08-06 01:01:46.162113	
+ RF r2 score : 0.8892766213656554
+2022-08-06 01:01:46.176753	
+
+XGBOOST:({'gamma': 0.2, 'learning_rate': 0.3, 'min_child_weight': 5}, XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+             colsample_bynode=1, colsample_bytree=1, enable_categorical=False,
+             gamma=0.2, gpu_id=-1, importance_type=None,
+             interaction_constraints='', learning_rate=0.3, max_delta_step=0,
+             max_depth=6, min_child_weight=5, missing=nan,
+             monotone_constraints='()', n_estimators=100, n_jobs=8,
+             num_parallel_tree=1, predictor='auto', random_state=0, reg_alpha=0,
+             reg_lambda=1, scale_pos_weight=1, subsample=1, tree_method='exact',
+             validate_parameters=1, verbosity=None), 3.5229734779561444, 0.9139632467264176, 1.0490925154101278, 0.9955911393899037, GridSearchCV(cv=5,
+             estimator=XGBRegressor(base_score=None, booster=None,
+                                    colsample_bylevel=None,
+                                    colsample_bynode=None,
+                                    colsample_bytree=None,
+                                    enable_categorical=False, gamma=None,
+                                    gpu_id=None, importance_type=None,
+                                    interaction_constraints=None,
+                                    learning_rate=None, max_delta_step=None,
+                                    max_depth=None, min_child_weight=None,
+                                    missing=nan, monotone_constraints=None,
+                                    n..._jobs=None,
+                                    num_parallel_tree=None, predictor=None,
+                                    random_state=None, reg_alpha=None,
+                                    reg_lambda=None, scale_pos_weight=None,
+                                    subsample=None, tree_method=None,
+                                    validate_parameters=None, verbosity=None),
+             n_jobs=-1,
+             param_grid={'gamma': [0.1, 0.2, 0.4],
+                         'learning_rate': [0.01, 0.05, 0.1, 0.17, 0.3],
+                         'min_child_weight': [1, 5, 10]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:01:46.177728	
+XGBOOST Error3.5229734779561444
+2022-08-06 01:01:46.177728	
+ XGB r2 score : 0.9139632467264176
+2022-08-06 01:01:46.226554	For cluster-1, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-06 01:01:46.226554	Random Forest for 1
+2022-08-06 01:01:51.023617	Got best parameers for cluster-1
+2022-08-06 01:01:51.023617	XGBoost for 1
+2022-08-06 01:02:07.707292	
+
+Cluster :1
+2022-08-06 01:02:07.712173	Random Forest:({'criterion': 'squared_error', 'n_estimators': 150}, RandomForestRegressor(n_estimators=150), 7.749447652343236, 0.7509804527717722, 2.72670363840063, 0.9647009827148276, GridSearchCV(cv=5, estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'criterion': ['squared_error'],
+                         'n_estimators': [125, 150, 200, 300, 400]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:02:07.712173	
+Random Forest Error7.749447652343236
+2022-08-06 01:02:07.712173	
+ RF r2 score : 0.7509804527717722
+2022-08-06 01:02:07.731691	
+
+XGBOOST:({'gamma': 0.1, 'learning_rate': 0.05, 'min_child_weight': 10}, XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+             colsample_bynode=1, colsample_bytree=1, enable_categorical=False,
+             gamma=0.1, gpu_id=-1, importance_type=None,
+             interaction_constraints='', learning_rate=0.05, max_delta_step=0,
+             max_depth=6, min_child_weight=10, missing=nan,
+             monotone_constraints='()', n_estimators=100, n_jobs=8,
+             num_parallel_tree=1, predictor='auto', random_state=0, reg_alpha=0,
+             reg_lambda=1, scale_pos_weight=1, subsample=1, tree_method='exact',
+             validate_parameters=1, verbosity=None), 7.628283934285906, 0.7587064902252065, 3.3776202128557884, 0.9458362943209625, GridSearchCV(cv=5,
+             estimator=XGBRegressor(base_score=None, booster=None,
+                                    colsample_bylevel=None,
+                                    colsample_bynode=None,
+                                    colsample_bytree=None,
+                                    enable_categorical=False, gamma=None,
+                                    gpu_id=None, importance_type=None,
+                                    interaction_constraints=None,
+                                    learning_rate=None, max_delta_step=None,
+                                    max_depth=None, min_child_weight=None,
+                                    missing=nan, monotone_constraints=None,
+                                    n..._jobs=None,
+                                    num_parallel_tree=None, predictor=None,
+                                    random_state=None, reg_alpha=None,
+                                    reg_lambda=None, scale_pos_weight=None,
+                                    subsample=None, tree_method=None,
+                                    validate_parameters=None, verbosity=None),
+             n_jobs=-1,
+             param_grid={'gamma': [0.1, 0.2, 0.4],
+                         'learning_rate': [0.01, 0.05, 0.1, 0.17, 0.3],
+                         'min_child_weight': [1, 5, 10]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:02:07.731691	
+XGBOOST Error7.628283934285906
+2022-08-06 01:02:07.732669	
+ XGB r2 score : 0.7587064902252065
+2022-08-06 01:02:07.787323	For cluster-2, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-06 01:02:07.787323	Random Forest for 2
+2022-08-06 01:02:12.872341	Got best parameers for cluster-2
+2022-08-06 01:02:12.872341	XGBoost for 2
+2022-08-06 01:02:31.399669	
+
+Cluster :2
+2022-08-06 01:02:31.404550	Random Forest:({'criterion': 'squared_error', 'n_estimators': 125}, RandomForestRegressor(n_estimators=125), 5.609589002641316, 0.8318753232633423, 2.1370232048178046, 0.9809296196758822, GridSearchCV(cv=5, estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'criterion': ['squared_error'],
+                         'n_estimators': [125, 150, 200, 300, 400]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:02:31.404550	
+Random Forest Error5.609589002641316
+2022-08-06 01:02:31.404550	
+ RF r2 score : 0.8318753232633423
+2022-08-06 01:02:31.426140	
+
+XGBOOST:({'gamma': 0.4, 'learning_rate': 0.17, 'min_child_weight': 5}, XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+             colsample_bynode=1, colsample_bytree=1, enable_categorical=False,
+             gamma=0.4, gpu_id=-1, importance_type=None,
+             interaction_constraints='', learning_rate=0.17, max_delta_step=0,
+             max_depth=6, min_child_weight=5, missing=nan,
+             monotone_constraints='()', n_estimators=100, n_jobs=8,
+             num_parallel_tree=1, predictor='auto', random_state=0, reg_alpha=0,
+             reg_lambda=1, scale_pos_weight=1, subsample=1, tree_method='exact',
+             validate_parameters=1, verbosity=None), 6.054145005464922, 0.8041718984187965, 0.6839400775363326, 0.9980466638615759, GridSearchCV(cv=5,
+             estimator=XGBRegressor(base_score=None, booster=None,
+                                    colsample_bylevel=None,
+                                    colsample_bynode=None,
+                                    colsample_bytree=None,
+                                    enable_categorical=False, gamma=None,
+                                    gpu_id=None, importance_type=None,
+                                    interaction_constraints=None,
+                                    learning_rate=None, max_delta_step=None,
+                                    max_depth=None, min_child_weight=None,
+                                    missing=nan, monotone_constraints=None,
+                                    n..._jobs=None,
+                                    num_parallel_tree=None, predictor=None,
+                                    random_state=None, reg_alpha=None,
+                                    reg_lambda=None, scale_pos_weight=None,
+                                    subsample=None, tree_method=None,
+                                    validate_parameters=None, verbosity=None),
+             n_jobs=-1,
+             param_grid={'gamma': [0.1, 0.2, 0.4],
+                         'learning_rate': [0.01, 0.05, 0.1, 0.17, 0.3],
+                         'min_child_weight': [1, 5, 10]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:02:31.426140	
+XGBOOST Error6.054145005464922
+2022-08-06 01:02:31.426140	
+ XGB r2 score : 0.8041718984187965
+2022-08-06 01:02:31.580231	For cluster-3, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-06 01:02:31.580231	Random Forest for 3
+2022-08-06 01:02:36.391905	Got best parameers for cluster-3
+2022-08-06 01:02:36.391905	XGBoost for 3
+2022-08-06 01:02:48.833940	
+
+Cluster :3
+2022-08-06 01:02:48.838862	Random Forest:({'criterion': 'squared_error', 'n_estimators': 300}, RandomForestRegressor(n_estimators=300), 4.451226527866343, 0.46495791283514587, 1.2716162084790756, 0.9830250206483522, GridSearchCV(cv=5, estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'criterion': ['squared_error'],
+                         'n_estimators': [125, 150, 200, 300, 400]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:02:48.838862	
+Random Forest Error4.451226527866343
+2022-08-06 01:02:48.838862	
+ RF r2 score : 0.46495791283514587
+2022-08-06 01:02:48.858340	
+
+XGBOOST:({'gamma': 0.2, 'learning_rate': 0.05, 'min_child_weight': 1}, XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+             colsample_bynode=1, colsample_bytree=1, enable_categorical=False,
+             gamma=0.2, gpu_id=-1, importance_type=None,
+             interaction_constraints='', learning_rate=0.05, max_delta_step=0,
+             max_depth=6, min_child_weight=1, missing=nan,
+             monotone_constraints='()', n_estimators=100, n_jobs=8,
+             num_parallel_tree=1, predictor='auto', random_state=0, reg_alpha=0,
+             reg_lambda=1, scale_pos_weight=1, subsample=1, tree_method='exact',
+             validate_parameters=1, verbosity=None), 5.599029032301868, 0.15344731543124224, 1.1679718382967892, 0.9856793778017192, GridSearchCV(cv=5,
+             estimator=XGBRegressor(base_score=None, booster=None,
+                                    colsample_bylevel=None,
+                                    colsample_bynode=None,
+                                    colsample_bytree=None,
+                                    enable_categorical=False, gamma=None,
+                                    gpu_id=None, importance_type=None,
+                                    interaction_constraints=None,
+                                    learning_rate=None, max_delta_step=None,
+                                    max_depth=None, min_child_weight=None,
+                                    missing=nan, monotone_constraints=None,
+                                    n..._jobs=None,
+                                    num_parallel_tree=None, predictor=None,
+                                    random_state=None, reg_alpha=None,
+                                    reg_lambda=None, scale_pos_weight=None,
+                                    subsample=None, tree_method=None,
+                                    validate_parameters=None, verbosity=None),
+             n_jobs=-1,
+             param_grid={'gamma': [0.1, 0.2, 0.4],
+                         'learning_rate': [0.01, 0.05, 0.1, 0.17, 0.3],
+                         'min_child_weight': [1, 5, 10]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:02:48.858340	
+XGBOOST Error5.599029032301868
+2022-08-06 01:02:48.859322	
+ XGB r2 score : 0.15344731543124224
+2022-08-06 01:02:49.314132	For cluster-4, Entered FindBestModel class in Cross_Validation_ModelSelection//best_model_finder.py
+2022-08-06 01:02:49.314132	Random Forest for 4
+2022-08-06 01:02:56.416477	Got best parameers for cluster-4
+2022-08-06 01:02:56.416477	XGBoost for 4
+2022-08-06 01:03:18.712198	
+
+Cluster :4
+2022-08-06 01:03:18.716102	Random Forest:({'criterion': 'squared_error', 'n_estimators': 400}, RandomForestRegressor(n_estimators=400), 5.789064390169562, 0.8511350236282876, 1.7971614967028462, 0.9838875628741613, GridSearchCV(cv=5, estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'criterion': ['squared_error'],
+                         'n_estimators': [125, 150, 200, 300, 400]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:03:18.716102	
+Random Forest Error5.789064390169562
+2022-08-06 01:03:18.716102	
+ RF r2 score : 0.8511350236282876
+2022-08-06 01:03:18.729767	
+
+XGBOOST:({'gamma': 0.1, 'learning_rate': 0.1, 'min_child_weight': 5}, XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+             colsample_bynode=1, colsample_bytree=1, enable_categorical=False,
+             gamma=0.1, gpu_id=-1, importance_type=None,
+             interaction_constraints='', learning_rate=0.1, max_delta_step=0,
+             max_depth=6, min_child_weight=5, missing=nan,
+             monotone_constraints='()', n_estimators=100, n_jobs=8,
+             num_parallel_tree=1, predictor='auto', random_state=0, reg_alpha=0,
+             reg_lambda=1, scale_pos_weight=1, subsample=1, tree_method='exact',
+             validate_parameters=1, verbosity=None), 4.421441375343149, 0.9131632592723119, 0.9201492293407938, 0.995776197935358, GridSearchCV(cv=5,
+             estimator=XGBRegressor(base_score=None, booster=None,
+                                    colsample_bylevel=None,
+                                    colsample_bynode=None,
+                                    colsample_bytree=None,
+                                    enable_categorical=False, gamma=None,
+                                    gpu_id=None, importance_type=None,
+                                    interaction_constraints=None,
+                                    learning_rate=None, max_delta_step=None,
+                                    max_depth=None, min_child_weight=None,
+                                    missing=nan, monotone_constraints=None,
+                                    n..._jobs=None,
+                                    num_parallel_tree=None, predictor=None,
+                                    random_state=None, reg_alpha=None,
+                                    reg_lambda=None, scale_pos_weight=None,
+                                    subsample=None, tree_method=None,
+                                    validate_parameters=None, verbosity=None),
+             n_jobs=-1,
+             param_grid={'gamma': [0.1, 0.2, 0.4],
+                         'learning_rate': [0.01, 0.05, 0.1, 0.17, 0.3],
+                         'min_child_weight': [1, 5, 10]},
+             scoring='neg_mean_squared_error', verbose=3))
+2022-08-06 01:03:18.729767	
+XGBOOST Error4.421441375343149
+2022-08-06 01:03:18.729767	
+ XGB r2 score : 0.9131632592723119

@@ -1,0 +1,118 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 290px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container form .Input_data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .Input_data .input_box{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.Input_data .input_box details{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.Input_data .input_box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border-bottom-width: 2px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.Input_data .input_box input:focus,
+.Input_data .input_box input:valid{
+    border-color: #9b59b6;
+}
+
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    border: none;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+form .button input:hover{
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+
+}
+.details{
+    font-size: 20px;
+}
+
+.container .Prediction{
+    font-weight: 500;
+}
+
+
+@media (max-width: 584px) {
+    .container{
+        max-width: 100%;
+    }
+    form .Input_data .input_box{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .container form .Input_data{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+}
