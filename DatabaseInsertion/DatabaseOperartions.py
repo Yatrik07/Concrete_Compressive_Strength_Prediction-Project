@@ -125,7 +125,7 @@ class DBOperations:
         Written By : Yatrik Shah
         """
         self.logger.write_logs("Entered function Dataframetodatabase.")
-        conn = sqlite3.connect(os.path.join('TrainingDatabase' , 'TrainingData.db') )
+        conn = sqlite3.connect('TrainingDatabase//TrainingData.db') 
         try:
             data.to_sql(name='Train', con=conn , index=False)
         except:
