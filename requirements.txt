@@ -4,7 +4,7 @@ flask
 joblib
 flask_cors
 scikit-learn
-xgboost
+xgboost==1.5.0
 Jinja2
 matplotlib
 seaborn
