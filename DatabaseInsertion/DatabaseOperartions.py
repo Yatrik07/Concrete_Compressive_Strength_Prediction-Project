@@ -1,7 +1,7 @@
 import sqlite3
 from App_Logging.Logging import get_logs
 import pandas as pd
-
+import os
 
 class DBOperations:
     def __init__(self):
