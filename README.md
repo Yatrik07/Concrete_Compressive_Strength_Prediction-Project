@@ -42,3 +42,9 @@ The classical machine learning tasks like Data Exploration, Data Cleaning, Featu
 
 ### Results: 
 To build a solution that should able to predict the compressive strength of the concrete.
+
+### Deployment :
+https://ml-concrete-strength.herokuapp.com/  <br> 
+NOTE :<br> Retrain Part is okay, but on HEROKU cloud plateform does not support memory more than 200mb, and since Retrain Model requires more memory/RAM than 200mb, it won't support.
+-> Works well on local syatem.
+-> Working on further deployment options / will be upadted soon.
