@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>ConcreteStrengthPrediction.model_train API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ConcreteStrengthPrediction.model_train</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import pandas as pd
+from App_Logging.Logging import get_logs
+from trainingValidation.Train_Validation import Validations
+from preprocessing.data_preprocessing import preprocess
+from preprocessing.clustering import Create_Clusters
+from Cross_Validation_ModelSelection.best_model_finder import FindBestModel
+import json
+from DatabaseInsertion.DatabaseOperartions import DBOperations
+import os
+import shutil
+
+
+global X, y, full_data, clustered_X
+class Trainer:
+    def __init__(self):
+        self.valid_classObj = Validations()
+        self.logger = get_logs( open(&#34;Logs//Training_dataIngestion_validation_logs.txt&#34; , &#39;a&#39;))
+        self.logger.write_logs(&#34;Entered Trainer Class.&#34;)
+
+
+
+    def Training_Validations(self):
+        &#34;&#34;&#34;
+        Method Name : Training_Validations
+
+        Description : This method is written to apply Validations on the given batch files in terms of
+                        valid data, valid columns, fileName etc.
+                      If the TrainingBatchFile is valid then it is returned successfully from the function.
+                      else : It is moved to &#39;BadDataFolder&#39; .
+
+
+        Parameters : None
+
+        Returns : Valid_BatchFiles
+
+        Written By : Yatrik Shah
+        &#34;&#34;&#34;
+        self.logger.write_logs(&#34;Entered Training_Validations method in Trainer class.&#34;)
+        name = self.valid_classObj.getTrainingBatchFiles()
+        print(name)
+
+        valid_BatchFiles = []
+        for i in name:
+            print(self.valid_classObj.matchRegularExpression(i))
+
+
+            if (self.valid_classObj.CheckColumn_Name_Numbers(i) and \
+                self.valid_classObj.CheckColumnDatatype(i)) and\
+                    self.valid_classObj.matchRegularExpression(i):
+                valid_BatchFiles.append(i)
+
+        print(valid_BatchFiles)
+        self.logger.write_logs(f&#34;Here valid BatchFileNames : {valid_BatchFiles}&#34;)
+        self.logger.write_logs(f&#34;Here invalid BatchFileNames : {set(name).difference(valid_BatchFiles)}&#34;)
+
+
+        if list(set(name).difference(valid_BatchFiles)) != []:
+            self.logger.write_logs(f&#34;Moving Invalid Training Batch Files to BadDataFolder&#34;)
+            for InvalidBatchFile in list(set(name).difference(valid_BatchFiles)):
+                shutil.move(os.path.join(os.getcwd() , &#34;Training_BatchFiles&#34; , InvalidBatchFile) ,os.path.join(os.getcwd() , &#34;BadDataFolder&#34; , InvalidBatchFile) )
+
+
+        self.logger.write_logs(&#34;Existing from Training_Validations method.&#34;)
+
+        return valid_BatchFiles
+
+    def Preprocessing_clustering(self, full_data):
+        &#34;&#34;&#34;
+        Method Name : Preprocessing_clustering
+
+        Description : This method is written to apply entire preprocessing and clustering part on the given full data.
+                      This includes Seprating Feaure and Target column fro mthe full data , Scale the data,
+                      Create optimum clusters form the data.
+
+
+        Parameters : full_data : Full raw Data
+
+        Returns : None
+
+        Written By : Yatrik Shah
+        &#34;&#34;&#34;
+        self.logger.write_logs(&#34;Entered Preprocessing_clustering method in Trainer class.&#34;)
+
+        data_processor = preprocess()
+        self.X , self.y = data_processor.separate_X_Y(full_data)
+        self.columns = list(self.X.columns)
+        # X = data_processor.Data_Imputation(X)
+        self.X = pd.DataFrame(data_processor.scaling(self.X) , columns = self.columns)
+
+        clustering = Create_Clusters()
+        self.clustered_X = clustering.Create_Clusters_From_Data(self.X , clustering.silhoutte_score(self.X)[0] )
+
+
+    def training_clusterd_data(self):
+        &#34;&#34;&#34;
+        Method Name : training_clusterd_data
+
+        Description : This method is written to train different created clusters from the data with
+                      optimal parameters which gives the maximum accuracy.
+
+
+        Parameters : None
+
+        Returns : None
+
+        Written By : Yatrik Shah
+        &#34;&#34;&#34;
+        n = self.clustered_X[&#39;cluster&#39;].max()
+        RF_grid = {&#39;n_estimators&#39;: [125, 150, 200, 300, 400], &#34;criterion&#34;: [&#39;squared_error&#39;]}
+        XG_grid = {&#39;learning_rate&#39;: [0.01, 0.05, 0.1, 0.17, 0.3], &#39;gamma&#39;: [0.1, 0.2, 0.4],
+                   &#39;min_child_weight&#39;: [1, 5, 10]}
+
+
+        for cluster_number in range(n):
+            find_best_model_for_clusters = FindBestModel(self.clustered_X[ self.clustered_X[&#39;cluster&#39;] == cluster_number ].drop(&#34;cluster&#34; , axis=1) , \
+                                                         self.y.iloc[  list(self.clustered_X[ self.clustered_X[&#39;cluster&#39;] == cluster_number ].index) , : ] , str(cluster_number) )
+            find_best_model_for_clusters.best_model(XG_grid , RF_grid)
+
+
+    def Get_TriningBatchData(self):
+        &#34;&#34;&#34;
+        Method Name : Get_TriningBatchData
+
+        Description : This method is written to get all Training Batch Files in the folder &#39;Training_BatchFiles&#39;.
+                      And dumps the integrated full data from the BatchFiles into the database.
+                      This is a part of DataIngestion.
+
+        Parameters : None
+
+        Returns : None
+
+        Written By : Yatrik Shah
+        &#34;&#34;&#34;
+        Valid_dataFiles = self.Training_Validations()
+
+        with open(&#34;schema_training.json&#34;, &#34;r&#34;) as read_it:
+            self.schemaTraining_json = json.load(read_it)
+
+        columns = list(self.schemaTraining_json[&#39;ColName&#39;].keys())
+
+        finalTraining_df = pd.DataFrame(columns=columns)
+
+        for datafile in Valid_dataFiles:
+            df = pd.read_csv(&#34;Training_BatchFiles//&#34;+datafile)
+            finalTraining_df = pd.concat([finalTraining_df , df] , axis=0)
+
+        database = DBOperations()
+        database.Dataframetodatabase(finalTraining_df)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ConcreteStrengthPrediction.model_train.Trainer"><code class="flex name class">
+<span>class <span class="ident">Trainer</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Trainer:
+    def __init__(self):
+        self.valid_classObj = Validations()
+        self.logger = get_logs( open(&#34;Logs//Training_dataIngestion_validation_logs.txt&#34; , &#39;a&#39;))
+        self.logger.write_logs(&#34;Entered Trainer Class.&#34;)
+
+
+
+    def Training_Validations(self):
+        &#34;&#34;&#34;
+        Method Name : Training_Validations
+
+        Description : This method is written to apply Validations on the given batch files in terms of
+                        valid data, valid columns, fileName etc.
+                      If the TrainingBatchFile is valid then it is returned successfully from the function.
+                      else : It is moved to &#39;BadDataFolder&#39; .
+
+
+        Parameters : None
+
+        Returns : Valid_BatchFiles
+
+        Written By : Yatrik Shah
+        &#34;&#34;&#34;
+        self.logger.write_logs(&#34;Entered Training_Validations method in Trainer class.&#34;)
+        name = self.valid_classObj.getTrainingBatchFiles()
+        print(name)
+
+        valid_BatchFiles = []
+        for i in name:
+            print(self.valid_classObj.matchRegularExpression(i))
+
+
+            if (self.valid_classObj.CheckColumn_Name_Numbers(i) and \
+                self.valid_classObj.CheckColumnDatatype(i)) and\
+                    self.valid_classObj.matchRegularExpression(i):
+                valid_BatchFiles.append(i)
+
+        print(valid_BatchFiles)
+        self.logger.write_logs(f&#34;Here valid BatchFileNames : {valid_BatchFiles}&#34;)
+        self.logger.write_logs(f&#34;Here invalid BatchFileNames : {set(name).difference(valid_BatchFiles)}&#34;)
+
+
+        if list(set(name).difference(valid_BatchFiles)) != []:
+            self.logger.write_logs(f&#34;Moving Invalid Training Batch Files to BadDataFolder&#34;)
+            for InvalidBatchFile in list(set(name).difference(valid_BatchFiles)):
+                shutil.move(os.path.join(os.getcwd() , &#34;Training_BatchFiles&#34; , InvalidBatchFile) ,os.path.join(os.getcwd() , &#34;BadDataFolder&#34; , InvalidBatchFile) )
+
+
+        self.logger.write_logs(&#34;Existing from Training_Validations method.&#34;)
+
+        return valid_BatchFiles
+
+    def Preprocessing_clustering(self, full_data):
+        &#34;&#34;&#34;
+        Method Name : Preprocessing_clustering
+
+        Description : This method is written to apply entire preprocessing and clustering part on the given full data.
+                      This includes Seprating Feaure and Target column fro mthe full data , Scale the data,
+                      Create optimum clusters form the data.
+
+
+        Parameters : full_data : Full raw Data
+
+        Returns : None
+
+        Written By : Yatrik Shah
+        &#34;&#34;&#34;
+        self.logger.write_logs(&#34;Entered Preprocessing_clustering method in Trainer class.&#34;)
+
+        data_processor = preprocess()
+        self.X , self.y = data_processor.separate_X_Y(full_data)
+        self.columns = list(self.X.columns)
+        # X = data_processor.Data_Imputation(X)
+        self.X = pd.DataFrame(data_processor.scaling(self.X) , columns = self.columns)
+
+        clustering = Create_Clusters()
+        self.clustered_X = clustering.Create_Clusters_From_Data(self.X , clustering.silhoutte_score(self.X)[0] )
+
+
+    def training_clusterd_data(self):
+        &#34;&#34;&#34;
+        Method Name : training_clusterd_data
+
+        Description : This method is written to train different created clusters from the data with
+                      optimal parameters which gives the maximum accuracy.
+
+
+        Parameters : None
+
+        Returns : None
+
+        Written By : Yatrik Shah
+        &#34;&#34;&#34;
+        n = self.clustered_X[&#39;cluster&#39;].max()
+        RF_grid = {&#39;n_estimators&#39;: [125, 150, 200, 300, 400], &#34;criterion&#34;: [&#39;squared_error&#39;]}
+        XG_grid = {&#39;learning_rate&#39;: [0.01, 0.05, 0.1, 0.17, 0.3], &#39;gamma&#39;: [0.1, 0.2, 0.4],
+                   &#39;min_child_weight&#39;: [1, 5, 10]}
+
+
+        for cluster_number in range(n):
+            find_best_model_for_clusters = FindBestModel(self.clustered_X[ self.clustered_X[&#39;cluster&#39;] == cluster_number ].drop(&#34;cluster&#34; , axis=1) , \
+                                                         self.y.iloc[  list(self.clustered_X[ self.clustered_X[&#39;cluster&#39;] == cluster_number ].index) , : ] , str(cluster_number) )
+            find_best_model_for_clusters.best_model(XG_grid , RF_grid)
+
+
+    def Get_TriningBatchData(self):
+        &#34;&#34;&#34;
+        Method Name : Get_TriningBatchData
+
+        Description : This method is written to get all Training Batch Files in the folder &#39;Training_BatchFiles&#39;.
+                      And dumps the integrated full data from the BatchFiles into the database.
+                      This is a part of DataIngestion.
+
+        Parameters : None
+
+        Returns : None
+
+        Written By : Yatrik Shah
+        &#34;&#34;&#34;
+        Valid_dataFiles = self.Training_Validations()
+
+        with open(&#34;schema_training.json&#34;, &#34;r&#34;) as read_it:
+            self.schemaTraining_json = json.load(read_it)
+
+        columns = list(self.schemaTraining_json[&#39;ColName&#39;].keys())
+
+        finalTraining_df = pd.DataFrame(columns=columns)
+
+        for datafile in Valid_dataFiles:
+            df = pd.read_csv(&#34;Training_BatchFiles//&#34;+datafile)
+            finalTraining_df = pd.concat([finalTraining_df , df] , axis=0)
+
+        database = DBOperations()
+        database.Dataframetodatabase(finalTraining_df)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="ConcreteStrengthPrediction.model_train.Trainer.Get_TriningBatchData"><code class="name flex">
+<span>def <span class="ident">Get_TriningBatchData</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method Name : Get_TriningBatchData</p>
+<p>Description : This method is written to get all Training Batch Files in the folder 'Training_BatchFiles'.
+And dumps the integrated full data from the BatchFiles into the database.
+This is a part of DataIngestion.</p>
+<p>Parameters : None</p>
+<p>Returns : None</p>
+<p>Written By : Yatrik Shah</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Get_TriningBatchData(self):
+    &#34;&#34;&#34;
+    Method Name : Get_TriningBatchData
+
+    Description : This method is written to get all Training Batch Files in the folder &#39;Training_BatchFiles&#39;.
+                  And dumps the integrated full data from the BatchFiles into the database.
+                  This is a part of DataIngestion.
+
+    Parameters : None
+
+    Returns : None
+
+    Written By : Yatrik Shah
+    &#34;&#34;&#34;
+    Valid_dataFiles = self.Training_Validations()
+
+    with open(&#34;schema_training.json&#34;, &#34;r&#34;) as read_it:
+        self.schemaTraining_json = json.load(read_it)
+
+    columns = list(self.schemaTraining_json[&#39;ColName&#39;].keys())
+
+    finalTraining_df = pd.DataFrame(columns=columns)
+
+    for datafile in Valid_dataFiles:
+        df = pd.read_csv(&#34;Training_BatchFiles//&#34;+datafile)
+        finalTraining_df = pd.concat([finalTraining_df , df] , axis=0)
+
+    database = DBOperations()
+    database.Dataframetodatabase(finalTraining_df)</code></pre>
+</details>
+</dd>
+<dt id="ConcreteStrengthPrediction.model_train.Trainer.Preprocessing_clustering"><code class="name flex">
+<span>def <span class="ident">Preprocessing_clustering</span></span>(<span>self, full_data)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method Name : Preprocessing_clustering</p>
+<p>Description : This method is written to apply entire preprocessing and clustering part on the given full data.
+This includes Seprating Feaure and Target column fro mthe full data , Scale the data,
+Create optimum clusters form the data.</p>
+<p>Parameters : full_data : Full raw Data</p>
+<p>Returns : None</p>
+<p>Written By : Yatrik Shah</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Preprocessing_clustering(self, full_data):
+    &#34;&#34;&#34;
+    Method Name : Preprocessing_clustering
+
+    Description : This method is written to apply entire preprocessing and clustering part on the given full data.
+                  This includes Seprating Feaure and Target column fro mthe full data , Scale the data,
+                  Create optimum clusters form the data.
+
+
+    Parameters : full_data : Full raw Data
+
+    Returns : None
+
+    Written By : Yatrik Shah
+    &#34;&#34;&#34;
+    self.logger.write_logs(&#34;Entered Preprocessing_clustering method in Trainer class.&#34;)
+
+    data_processor = preprocess()
+    self.X , self.y = data_processor.separate_X_Y(full_data)
+    self.columns = list(self.X.columns)
+    # X = data_processor.Data_Imputation(X)
+    self.X = pd.DataFrame(data_processor.scaling(self.X) , columns = self.columns)
+
+    clustering = Create_Clusters()
+    self.clustered_X = clustering.Create_Clusters_From_Data(self.X , clustering.silhoutte_score(self.X)[0] )</code></pre>
+</details>
+</dd>
+<dt id="ConcreteStrengthPrediction.model_train.Trainer.Training_Validations"><code class="name flex">
+<span>def <span class="ident">Training_Validations</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method Name : Training_Validations</p>
+<p>Description : This method is written to apply Validations on the given batch files in terms of
+valid data, valid columns, fileName etc.
+If the TrainingBatchFile is valid then it is returned successfully from the function.
+else : It is moved to 'BadDataFolder' .</p>
+<p>Parameters : None</p>
+<p>Returns : Valid_BatchFiles</p>
+<p>Written By : Yatrik Shah</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Training_Validations(self):
+    &#34;&#34;&#34;
+    Method Name : Training_Validations
+
+    Description : This method is written to apply Validations on the given batch files in terms of
+                    valid data, valid columns, fileName etc.
+                  If the TrainingBatchFile is valid then it is returned successfully from the function.
+                  else : It is moved to &#39;BadDataFolder&#39; .
+
+
+    Parameters : None
+
+    Returns : Valid_BatchFiles
+
+    Written By : Yatrik Shah
+    &#34;&#34;&#34;
+    self.logger.write_logs(&#34;Entered Training_Validations method in Trainer class.&#34;)
+    name = self.valid_classObj.getTrainingBatchFiles()
+    print(name)
+
+    valid_BatchFiles = []
+    for i in name:
+        print(self.valid_classObj.matchRegularExpression(i))
+
+
+        if (self.valid_classObj.CheckColumn_Name_Numbers(i) and \
+            self.valid_classObj.CheckColumnDatatype(i)) and\
+                self.valid_classObj.matchRegularExpression(i):
+            valid_BatchFiles.append(i)
+
+    print(valid_BatchFiles)
+    self.logger.write_logs(f&#34;Here valid BatchFileNames : {valid_BatchFiles}&#34;)
+    self.logger.write_logs(f&#34;Here invalid BatchFileNames : {set(name).difference(valid_BatchFiles)}&#34;)
+
+
+    if list(set(name).difference(valid_BatchFiles)) != []:
+        self.logger.write_logs(f&#34;Moving Invalid Training Batch Files to BadDataFolder&#34;)
+        for InvalidBatchFile in list(set(name).difference(valid_BatchFiles)):
+            shutil.move(os.path.join(os.getcwd() , &#34;Training_BatchFiles&#34; , InvalidBatchFile) ,os.path.join(os.getcwd() , &#34;BadDataFolder&#34; , InvalidBatchFile) )
+
+
+    self.logger.write_logs(&#34;Existing from Training_Validations method.&#34;)
+
+    return valid_BatchFiles</code></pre>
+</details>
+</dd>
+<dt id="ConcreteStrengthPrediction.model_train.Trainer.training_clusterd_data"><code class="name flex">
+<span>def <span class="ident">training_clusterd_data</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method Name : training_clusterd_data</p>
+<p>Description : This method is written to train different created clusters from the data with
+optimal parameters which gives the maximum accuracy.</p>
+<p>Parameters : None</p>
+<p>Returns : None</p>
+<p>Written By : Yatrik Shah</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def training_clusterd_data(self):
+    &#34;&#34;&#34;
+    Method Name : training_clusterd_data
+
+    Description : This method is written to train different created clusters from the data with
+                  optimal parameters which gives the maximum accuracy.
+
+
+    Parameters : None
+
+    Returns : None
+
+    Written By : Yatrik Shah
+    &#34;&#34;&#34;
+    n = self.clustered_X[&#39;cluster&#39;].max()
+    RF_grid = {&#39;n_estimators&#39;: [125, 150, 200, 300, 400], &#34;criterion&#34;: [&#39;squared_error&#39;]}
+    XG_grid = {&#39;learning_rate&#39;: [0.01, 0.05, 0.1, 0.17, 0.3], &#39;gamma&#39;: [0.1, 0.2, 0.4],
+               &#39;min_child_weight&#39;: [1, 5, 10]}
+
+
+    for cluster_number in range(n):
+        find_best_model_for_clusters = FindBestModel(self.clustered_X[ self.clustered_X[&#39;cluster&#39;] == cluster_number ].drop(&#34;cluster&#34; , axis=1) , \
+                                                     self.y.iloc[  list(self.clustered_X[ self.clustered_X[&#39;cluster&#39;] == cluster_number ].index) , : ] , str(cluster_number) )
+        find_best_model_for_clusters.best_model(XG_grid , RF_grid)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="ConcreteStrengthPrediction" href="index.html">ConcreteStrengthPrediction</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="ConcreteStrengthPrediction.model_train.Trainer" href="#ConcreteStrengthPrediction.model_train.Trainer">Trainer</a></code></h4>
+<ul class="">
+<li><code><a title="ConcreteStrengthPrediction.model_train.Trainer.Get_TriningBatchData" href="#ConcreteStrengthPrediction.model_train.Trainer.Get_TriningBatchData">Get_TriningBatchData</a></code></li>
+<li><code><a title="ConcreteStrengthPrediction.model_train.Trainer.Preprocessing_clustering" href="#ConcreteStrengthPrediction.model_train.Trainer.Preprocessing_clustering">Preprocessing_clustering</a></code></li>
+<li><code><a title="ConcreteStrengthPrediction.model_train.Trainer.Training_Validations" href="#ConcreteStrengthPrediction.model_train.Trainer.Training_Validations">Training_Validations</a></code></li>
+<li><code><a title="ConcreteStrengthPrediction.model_train.Trainer.training_clusterd_data" href="#ConcreteStrengthPrediction.model_train.Trainer.training_clusterd_data">training_clusterd_data</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
