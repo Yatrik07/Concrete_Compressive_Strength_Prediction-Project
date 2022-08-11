@@ -37,7 +37,7 @@ class Trainer:
         """
         self.logger.write_logs("Entered Training_Validations method in Trainer class.")
         name = self.valid_classObj.getTrainingBatchFiles()
-        print(name)
+        #print(name)
 
         valid_BatchFiles = []
         for i in name:
@@ -49,7 +49,7 @@ class Trainer:
                     self.valid_classObj.matchRegularExpression(i):
                 valid_BatchFiles.append(i)
 
-        print(valid_BatchFiles)
+        #print(valid_BatchFiles)
         self.logger.write_logs(f"Here valid BatchFileNames : {valid_BatchFiles}")
         self.logger.write_logs(f"Here invalid BatchFileNames : {set(name).difference(valid_BatchFiles)}")
 
@@ -146,40 +146,6 @@ class Trainer:
 
         database = DBOperations()
         database.Dataframetodatabase(finalTraining_df)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
