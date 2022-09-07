@@ -45,6 +45,9 @@ def pred_page():
 
             return render_template('prediction.html' , result = output)
 
+    except ValueError:
+        return render_template('Error.html' , result = f"Invalid Input")
+
     except Exception as e:
         return render_template('Error.html' , result = f"Some Error Occured {e}")
 
