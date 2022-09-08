@@ -102,5 +102,5 @@ def get_Prediction(input):
     logger.write_logs("Returning output from get_Predictions function..")
     return output
 
-if _name_ == "__main__":
+if __name__ == "__main__":
     app.run()
