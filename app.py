@@ -10,7 +10,7 @@ from DatabaseInsertion.DatabaseOperartions import DBOperations
 warnings.filterwarnings("ignore")
 
 
-app = flask.Flask(_name_)
+app = flask.Flask(__name__)
 logger = get_logs( open("Logs//homepageLogs.txt" , "a"))
 
 
