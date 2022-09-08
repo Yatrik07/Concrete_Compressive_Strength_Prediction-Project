@@ -10,7 +10,7 @@ from DatabaseInsertion.DatabaseOperartions import DBOperations
 warnings.filterwarnings("ignore")
 
 
-app = flask.Flask(__name__)
+app = flask.Flask(_name_)
 logger = get_logs( open("Logs//homepageLogs.txt" , "a"))
 
 
@@ -57,33 +57,23 @@ def pred_page():
 @app.route('/train', methods=['GET', 'POST'])
 @cross_origin()
 def train():
-    try:
-        logger.write_logs("Entered /train path , ReTraining model.")
-        from  model_train import Trainer
-        trainer = Trainer()
-        trainer.Get_TriningBatchData()
-        database = DBOperations()
-        df = database.getDatafromDatabase()
-        trainer.Preprocessing_clustering(df)
-        trainer.training_clusterd_data()
-        return render_template('Message.html', result="Successfully Retrained Model.")
-    except Exception as e:  
-         return render_template('Message.html' , result = f"Some Error Occured {e}")
-        
-        
-        
+    logger.write_logs("Entered /train path , ReTraining model.")
+    from  model_train import Trainer
+    trainer = Trainer()
+    trainer.Get_TriningBatchData()
+    database = DBOperations()
+    df = database.getDatafromDatabase()
+    trainer.Preprocessing_clustering(df)
+    trainer.training_clusterd_data()
+    return render_template('Message.html', result="Successfully Retrained Model.")
 
 
 def get_objects():
     """
     Method Name : get_objects
-
     Description : This method is written to get the scaler and the clustering objects those are saved in serialized  format.
-
     Parameters : None
-
     Returns : scalerobject , clusteringObject
-
     Written By : Yatrik Shah
     """
     logger.write_logs("Entered get_objects function.")
@@ -95,15 +85,11 @@ def get_objects():
 def get_Prediction(input):
     """
     Method Name : get_Prediction
-
     Description : This method is written to get the predicted output given the input.
                   It applies the scaling operation , clustering operation and then calls the model according
                   to the respective cluster.
-
     Parameters : input
-
     Returns : PredictedOutput
-
     Written By : Yatrik Shah
     """
     logger.write_logs("Entered get_Prediction function.")
@@ -116,6 +102,5 @@ def get_Prediction(input):
     logger.write_logs("Returning output from get_Predictions function..")
     return output
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     app.run(debug=True)
-
