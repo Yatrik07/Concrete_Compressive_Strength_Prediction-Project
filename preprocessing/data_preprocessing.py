@@ -74,8 +74,23 @@ class preprocess:
 
         returns : Imputed Data or Raise Exception
         '''
-        if data.isna().sum().sum() < 0.35 * (data.shape[0]*data.shape[1]):
-            pass
+    def Data_Imputation(self , data):
+        '''
+        method name : Data_Imputation
+
+        description : -> Given the data, if there are some missing values or Null values then impute them.
+
+                      -> If there are significant number of missing or Null values in a single TrainingBatchFile
+                            then move it to BadDataFolder.
+
+        parameters : data
+
+        returns : Imputed Data or Raise Exception
+        '''
+        imputer = KNNImputer()
+        imputer.fit_transform(data)
+        return data
+
 
 
 
