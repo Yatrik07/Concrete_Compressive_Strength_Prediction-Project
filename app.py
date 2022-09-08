@@ -103,4 +103,4 @@ def get_Prediction(input):
     return output
 
 if _name_ == "_main_":
-    app.run(port=process.env.PORT)
+    app.run()
