@@ -7,11 +7,11 @@ from flask_cors import CORS, cross_origin
 from App_Logging.Logging import get_logs
 import warnings
 from DatabaseInsertion.DatabaseOperartions import DBOperations
+
 warnings.filterwarnings("ignore")
 
-
 app = flask.Flask(__name__)
-logger = get_logs( open("Logs//homepageLogs.txt" , "a"))
+logger = get_logs(open("Logs//homepageLogs.txt", "a"))
 
 
 @app.route('/', methods=['GET', "POST"])
@@ -39,37 +39,39 @@ def pred_page():
             logger.write_logs("Successfully taken input values from user")
 
             input = np.array([cement, blast_furnace_slag, fly_ash, water, superplasticizer,
-                               coarse_aggregate, fine_aggregate, age]).reshape(1, 8)
+                              coarse_aggregate, fine_aggregate, age]).reshape(1, 8)
 
             output = get_Prediction(input)
 
-            return render_template('prediction.html' , result = output)
+            return render_template('prediction.html', result=output)
 
     except ValueError:
-        return render_template('Error.html' , result = f"Invalid Input")
+        return render_template('Error.html', result=f"Invalid Input")
 
     except Exception as e:
-        return render_template('Error.html' , result = f"Some Error Occured {e}")
-
-
+        return render_template('Error.html', result=f"Some Error Occured {e}")
 
 
 @app.route('/train', methods=['GET', 'POST'])
 @cross_origin()
 def train():
-    try:
-        logger.write_logs("Entered /train path , ReTraining model.")
-        from  model_train import Trainer
-        trainer = Trainer()
-        trainer.Get_TriningBatchData()
-        database = DBOperations()
-        df = database.getDatafromDatabase()
-        trainer.Preprocessing_clustering(df)
-        trainer.training_clusterd_data()
-        return render_template('Message.html', result="Successfully Retrained Model.")
-    
-    except :
-        return render_template('Message.html' , result = 'Failed')
+   logger.write_logs("Entered /train path , ReTraining model.")
+   from model_train import Trainer
+   trainer = Trainer()
+   trainer.Get_TriningBatchData()
+   database = DBOperations()
+   df = database.getDatafromDatabase()
+   trainer.Preprocessing_clustering(df)
+   trainer.training_clusterd_data()
+   return render_template('Message.html' , result = "Successfully Retrained.")
+
+
+@app.route('/warning', methods=['GET', 'POST'])
+@cross_origin()
+def warning():
+    return render_template("warning.html")
+
+
 
 
 def get_objects():
@@ -84,7 +86,8 @@ def get_objects():
     scaler = joblib.load("models//Preprocessing Models//scaler.pickle")
     clustering = joblib.load("models//Preprocessing Models//clustering_model.pickle")
     logger.write_logs("Returning scaling and clustering objects from get_objects function.")
-    return scaler ,clustering
+    return scaler, clustering
+
 
 def get_Prediction(input):
     """
@@ -102,9 +105,10 @@ def get_Prediction(input):
     cluster_number = clustering.predict(input)
     model = joblib.load(f"models//cluster-{str(int(cluster_number[0]))}//final_model.pickle")
     output = model.predict(input)
-    output = str( round(  float(output[0]) ,2 ))
+    output = str(round(float(output[0]), 2))
     logger.write_logs("Returning output from get_Predictions function..")
     return output
 
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
