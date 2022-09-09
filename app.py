@@ -57,15 +57,19 @@ def pred_page():
 @app.route('/train', methods=['GET', 'POST'])
 @cross_origin()
 def train():
-    logger.write_logs("Entered /train path , ReTraining model.")
-    from  model_train import Trainer
-    trainer = Trainer()
-    trainer.Get_TriningBatchData()
-    database = DBOperations()
-    df = database.getDatafromDatabase()
-    trainer.Preprocessing_clustering(df)
-    trainer.training_clusterd_data()
-    return render_template('Message.html', result="Successfully Retrained Model.")
+    try:
+        logger.write_logs("Entered /train path , ReTraining model.")
+        from  model_train import Trainer
+        trainer = Trainer()
+        trainer.Get_TriningBatchData()
+        database = DBOperations()
+        df = database.getDatafromDatabase()
+        trainer.Preprocessing_clustering(df)
+        trainer.training_clusterd_data()
+        return render_template('Message.html', result="Successfully Retrained Model.")
+    
+    except :
+        return render_template('Message.html' , result = 'Failed')
 
 
 def get_objects():
