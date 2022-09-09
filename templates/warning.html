@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Concrete Compressive Strength Prediction</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/gif" href="favicon/animated_favicon1.gif">
+    <link rel="stylesheet" href="..//static//css//style.css">
+
+
+    <link rel="stylesheet" href="..//static//css//style2.css">
+</head>
+<body>
+    <div class="container" style="font-size: 30px;">
+        <div class="Prediction">
+            <center><h1> Warning </h1>  </center>
+
+            If you are trying to ReTrain on the Heroku server : <br> https://ml-concrete-strength.herokuapp.com/ <br> <br>
+
+            Then it won't work because: <br>
+            -> Heroku is a free server and it gives only 200mb RAM , but Model Retraining would take more than 200 mb RAM so in that case server may crash.  <br><br> 
+
+            <center><h3>If want to check "ReTrain" then Try this steps:</h3> </center>
+            You can check it on your own system : <br> 
+            -> Open command prompt <br>
+            -> cd Project_Directory # Change to the directory you want to clone project<br>
+            -> git clone https://github.com/Yatrik07/Concrete_Compressive_Strength_Prediction-Project.git <br>
+            -> cd Concrete_Compressive_Strength_Prediction-Project <br>
+            ->  pip install -r requirements.txt
+            -> python app.py<br>
+            -> Click on ReTrain. <br>
+
+        </div>
+
+	<form action="/train" method="POST">
+	<div class="button">
+	<input type="submit" value="ReTrain Model" formaction="/train">
+	 </div>
+	  </form>
+
+
+    </div>
+</body>
+</html>
