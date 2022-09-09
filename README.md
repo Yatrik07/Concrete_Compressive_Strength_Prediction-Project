@@ -1,7 +1,5 @@
 ## Concrete Compressive Strength Prediction - Project
 
-#### -> PROJECT IS ONGOING, WILL BE COMPLETED AND UPLOADED SOON.
-
 #### This advanced dynamic Machine Learning Project is a part of internship at iNeuron.
 
 ### Problem Statement: 
@@ -45,6 +43,6 @@ To build a solution that should able to predict the compressive strength of the 
 
 ### Deployment :
 https://ml-concrete-strength.herokuapp.com/  <br> 
-NOTE :<br> Retrain Part is okay, but on HEROKU cloud plateform does not support memory more than 200mb, and since Retrain Model requires more memory/RAM than 200mb, it won't support.
--> Works well on local syatem.
--> Working on further deployment options / will be upadted soon.
+
+# Documentation:
+Check "Documentation" folder or <br> [Click Here](https://github.com/Yatrik07/Concrete_Compressive_Strength_Prediction-Project/tree/main/Documentations)
