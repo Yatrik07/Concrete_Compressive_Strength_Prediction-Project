@@ -12,11 +12,14 @@ body{
     align-items: center;
     padding: 10px;
     background: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+
+
+
 }
 
 .container{
     max-width: 900px;
-    height: 600px;
+    height: 500px;
     width: 100%;
     background: #fff;
     padding: 2px 20px;
